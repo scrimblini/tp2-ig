@@ -1,1 +1,1 @@
-# tp2-ig
+# Trabajo Práctico N°2 Informática General
