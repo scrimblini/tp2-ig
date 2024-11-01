@@ -6,22 +6,28 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+p {
+    font-size: 1.5em;
+}
+
 #titlemain {
     margin-top:15%;
     margin-bottom:0;
     text-align: center;
-    font-size: 3em;
+}
+.maintitle {
+    font-size: 4em;
     font-weight: 700;
     transition:0.5s;
 }
 
-#titlemain:hover {
+.maintitle:hover {
     cursor:default;
     color:#d3ccbc;
     text-shadow: -4px 4px 0 #292429;
 }
 
-#maincont {
+#maincont, .contain {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,7 +73,7 @@ body {
     box-shadow: 0 0 3px #292429;
     border-radius: 2%;
     padding:5%;
-    width:650px;
+    width:900px;
     flex-wrap: wrap;
 }
 
@@ -83,7 +89,7 @@ body {
 
 .imgpic {
     width:100%;
-    max-width: 300px;
+    max-width: 700px;
     padding: 0.8em;
     display: inline-block;
 }
@@ -130,50 +136,49 @@ body {
 
 .diag1 {
     transform: rotate(60deg);
-    left:32.8%;
+    left:33.5%;
 
 }
 
 .diag2 {
     transform: rotate(60deg);
-    left:42.8%;
+    left:43.5%;
 }
 
 .diag3 {
     transform: rotate(120deg);
-    right:42.8%;
+    right:43.5%;
 }
 
 .diag4 {
     transform: rotate(120deg);
-    right:32.8%;
+    right:33.5%;
 }
 
 .semi2, .semi3 {
-    bottom: 17.7%;
+    bottom: 16%;
 }
 
 .semi1, .semi4 {
-    bottom:32.8%;
+    bottom:32.2%;
     height:40px;
 }
 
 .semi1 {
     transform: rotate(20deg);
-    left:29.5%;
+    left:31.2%;
 }
 .semi2 {
-    left:40.8%;
+    left:42%;
 }
 
 .semi3 {
-    right:40.8%;
+    right:42%;
 }
 
 .semi4 {
     transform: rotate(160deg);
-    right:29.5%;
-    bottom:32.8%;
+    right:31.2%;
 }
 
 .bton1, .bton2, .bton3, .bton4 {
@@ -193,30 +198,63 @@ body {
 }
 
 .bton1 {
-    left:24%;
+    left:28%;
     bottom: 17%;
 }
 
 .bton2 {
-    left:38.3%;
+    left: 40.2%;
     bottom:0%;
 }
 
 .bton3 {
-    right:38.3%;
+    right:40.2%;
     bottom:0%;
 }
 
 .bton4 {
-    right:24%;
+    right:28%;
     bottom: 17%;
 }
-
 
 
 footer {
     text-align: center;
     height:10%;
 }
+
+.fixedinbg {
+    background-image: url(../files/opn2.png);
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cfade {
+    position:relative;
+    padding: 2em;
+    background-color:black;
+    color:#d3ccbc;
+    box-shadow: 0 -100px 100px black;
+}
+
+.cfade p {
+    font-size: 1.5em;
+    padding: 2em;
+}
+
+.headercontains {
+    display: flex;
+    position:absolute;
+    top:-30%;
+}
+
+.headercontains .underpic {
+    font-size: 1em;
+}
+
+
 
 /*PLEASE ADD MEDIA QUERIES or use tailwind properly idk*/
