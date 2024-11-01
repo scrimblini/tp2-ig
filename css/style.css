@@ -12,6 +12,13 @@ body {
     text-align: center;
     font-size: 3em;
     font-weight: 700;
+    transition:0.5s;
+}
+
+#titlemain:hover {
+    cursor:default;
+    color:#d3ccbc;
+    text-shadow: -4px 4px 0 #292429;
 }
 
 #maincont {
@@ -21,11 +28,17 @@ body {
     justify-content: center;
 }
 
-.verticl, .verticl2, .verticl3, .verticl4, .verticl5 {
+.verticl {
+    margin:0.8em;
+}
+
+.verticl, .verticl2, .verticl3, .verticl4, .verticl5, .diag1, .diag2, .diag3, .diag4, .semi1, .semi2, .semi3, .semi4 {
     background-color: #292429;
     width:2px;
+  }
+
+  .verticl, .verticl2, .verticl3, .verticl4, .verticl5, .semi2, .semi3 {
     height: 70px;
-    margin: 1%;
   }
 
 .unfoldBtns {
@@ -34,6 +47,12 @@ body {
     width:30px;
     height:auto;
     margin:0;
+    transition:0.5s;
+}
+
+.unfoldBtns:hover {
+    background-color: #292429;
+    color: #d3ccbc;
 }
 
 #mainarea {
@@ -50,7 +69,6 @@ body {
     padding:5%;
     width:650px;
     flex-wrap: wrap;
-    /*text-align: center;*/
 }
 
 .divtext {
@@ -79,12 +97,14 @@ body {
 }
 
 .bunchoflinks {
+    position:relative;
     margin:2em;
     padding: 0.8em;
+    height:200px;
 
 }
 
-.verticl2, .verticl3, .verticl4, .verticl5 {
+.verticl2, .verticl3, .verticl4, .verticl5, .diag1, .diag2, .diag3, .diag4, .semi1, .semi2, .semi3, .semi4 {
     position:absolute;
   }
 
@@ -103,3 +123,100 @@ body {
     right:35%;
   }
 
+.diag1, .diag2, .diag3, .diag4 {
+    height:30px;
+    bottom: 47.8%;
+}
+
+.diag1 {
+    transform: rotate(60deg);
+    left:32.8%;
+
+}
+
+.diag2 {
+    transform: rotate(60deg);
+    left:42.8%;
+}
+
+.diag3 {
+    transform: rotate(120deg);
+    right:42.8%;
+}
+
+.diag4 {
+    transform: rotate(120deg);
+    right:32.8%;
+}
+
+.semi2, .semi3 {
+    bottom: 17.7%;
+}
+
+.semi1, .semi4 {
+    bottom:32.8%;
+    height:40px;
+}
+
+.semi1 {
+    transform: rotate(20deg);
+    left:29.5%;
+}
+.semi2 {
+    left:40.8%;
+}
+
+.semi3 {
+    right:40.8%;
+}
+
+.semi4 {
+    transform: rotate(160deg);
+    right:29.5%;
+    bottom:32.8%;
+}
+
+.bton1, .bton2, .bton3, .bton4 {
+    position: absolute;
+    color:#fb350d;
+    border-radius: 100%;
+    border:3px solid #fb350d;   
+    width:30px;
+    height:auto;
+    margin:0;
+    transition:0.5s;
+}
+
+.bton1:hover, .bton2:hover, .bton3:hover, .bton4:hover {
+    background-color: #fb350d;
+    color:#d3ccbc;
+}
+
+.bton1 {
+    left:24%;
+    bottom: 17%;
+}
+
+.bton2 {
+    left:38.3%;
+    bottom:0%;
+}
+
+.bton3 {
+    right:38.3%;
+    bottom:0%;
+}
+
+.bton4 {
+    right:24%;
+    bottom: 17%;
+}
+
+
+
+footer {
+    text-align: center;
+    height:10%;
+}
+
+/*PLEASE ADD MEDIA QUERIES or use tailwind properly idk*/
