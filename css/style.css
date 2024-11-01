@@ -21,17 +21,85 @@ body {
     justify-content: center;
 }
 
-.verticl {
+.verticl, .verticl2, .verticl3, .verticl4, .verticl5 {
     background-color: #292429;
     width:2px;
     height: 70px;
-    top: 0;
     margin: 1%;
   }
 
 .unfoldBtns {
     border-radius: 100%;
     border:3px solid #292429;   
-    width:30px  ;
+    width:30px;
+    height:auto;
     margin:0;
 }
+
+#mainarea {
+    display:none;
+    padding:2%;
+}
+
+.contentdiv {
+    display: flex;
+    background-color: #292429;
+    color:#d3ccbc;
+    box-shadow: 0 0 3px #292429;
+    border-radius: 2%;
+    padding:5%;
+    width:650px;
+    flex-wrap: wrap;
+    /*text-align: center;*/
+}
+
+.divtext {
+    text-align: left;
+    flex-basis: 50%;
+    padding: 0.8em;
+}
+
+.imagewithfootnote {
+    flex-basis: 50%;
+}
+
+.imgpic {
+    width:100%;
+    max-width: 300px;
+    padding: 0.8em;
+    display: inline-block;
+}
+
+.underpic {
+    opacity:50%;
+    font-style: italic;
+    font-size: 0.8em;
+    padding:0.5em;
+    text-align: left;
+}
+
+.bunchoflinks {
+    margin:2em;
+    padding: 0.8em;
+
+}
+
+.verticl2, .verticl3, .verticl4, .verticl5 {
+    position:absolute;
+  }
+
+  .verticl2 {
+    left:35%;
+  }
+
+  .verticl3 {
+    left: 45%;
+  }
+  .verticl4 {
+    right: 45%;
+  }
+
+  .verticl5 {
+    right:35%;
+  }
+
