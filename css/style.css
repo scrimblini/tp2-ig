@@ -106,7 +106,7 @@ button {
     box-shadow: 0 0 3px #292429;
     border-radius: 2%;
     padding:5%;
-    width:900px;
+    max-width:900px;
     flex-wrap: wrap;
 }
 
@@ -137,11 +137,13 @@ button {
 
 .bunchoflinks {
     position:relative;
-    margin:2em;
+    margin:0 auto;
     padding: 0.8em;
     height:200px;
+    max-width: 900px;
 
 }
+
 
 .verticl2, .verticl3, .verticl4, .verticl5, .diag1, .diag2, .diag3, .diag4, .semi1, .semi2, .semi3, .semi4 {
     position:absolute;
@@ -454,3 +456,40 @@ footer {
     color: #292429;
     opacity: 50%;
   }
+
+
+.slideshowcont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:2em;
+}
+
+@media (max-width: 990px) {
+.verticl2, .verticl3, .verticl4, .verticl5, .diag1, .diag2, .diag3, .diag4, .semi1, .semi2, .semi3, .semi4  {
+    display: none;
+}
+
+.bton1, .bton2, .bton3, .bton4 {
+    bottom: 17%;
+}
+
+.bton1 {
+    left:28%;
+    
+}
+
+.bton2 {
+    left: 40.2%;
+}
+
+.bton3 {
+    right:40.2%;
+}
+
+.bton4 {
+    right:28%;
+}
+
+    
+}
