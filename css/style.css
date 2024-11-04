@@ -14,6 +14,10 @@ p {
     font-size: 1.5em;
 }
 
+button {
+    background-color: transparent;
+}
+
 #titlemain {
     margin-top:15%;
     margin-bottom:0;
@@ -235,7 +239,10 @@ footer {
     background-image: url(../files/opn2.png);
 }
 .bgfixed2 {
-    background-image: url(../files/);
+    background-image: url(../files/albums/albumbg2.png);
+}
+.bgfixed3 {
+    background-image: url(../files/albums/albumbg.png);
 }
 
 .cfade {
@@ -261,19 +268,27 @@ footer {
     font-size: 1em;
 }
 
+.parentshrink {
+    background-color: black;
+    box-shadow: 0 -100px 100px black;
+}
+
 .snapsitems {
+    
+    max-width:950px;
+    margin:0 auto;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: top;
     justify-content: center;
-    margin-top:15%; 
+    padding: 1em;
     background-color: black;
     
 }
 
 .shopitem {
     width: 300px;
-    padding: 1em;
+    padding:3em;
     color:#d3ccbc;
 }
 
@@ -288,9 +303,89 @@ footer {
     font-style: italic;
     opacity: 50%;
 }
-.shoplink a {
-    font-weight: bold;
+
+.contline {
+    padding:5% 5% 5% 0;
+    height:300px;
+    position:fixed;
+    top:2px;
+    left:0;
+    width:100%;
     
 }
 
+.hoverline1 {
+    position:relative;
+    background-color: #d3ccbc;
+    width:120px;
+    height: 5px;
+    top:0;
+}
+.hoverline2 {
+    position:relative;
+    background-color: #d3ccbc;
+    width:40px;
+    height: 5px;
+    top:12px;
+    left:108px;
+    transform:rotate(60deg);
+}
+.hoverline3 {
+    position:relative;
+    background-color: #d3ccbc;
+    width:60px;
+    height: 5px;
+    top:24px;
+    left:135px;
+}
+
+.divforbutton {
+    position:relative;
+    top:7px;
+    left:205px;
+}
+.altbtns {
+    border-radius: 100%;
+    border:3px solid #d3ccbc;
+    width:30px;
+    height:auto;
+    margin:0;
+    color:#d3ccbc;
+}
+.altbtns:hover {
+    background-color: #d3ccbc;
+    color:black;
+}
+
+
+
+
+
+
+.sidemenu {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    background-color: #d3ccbc;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s; 
+  }
+  
+  .sidemenu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #292429;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidemenu a:hover {
+    color: #292429;
+    opacity: 50%;
+  }
 /*PLEASE ADD MEDIA QUERIES or use tailwind properly idk*/
