@@ -14,6 +14,33 @@ p {
     font-size: 1.5em;
 }
 
+a {   
+    text-decoration: none;
+}
+a:hover {
+    font-weight: bolder;
+}
+
+footer {
+    margin-bottom:0;
+    padding:2em;
+}
+
+.colora {
+    color: #292429;
+    background-color: #d3ccbc;
+}
+.colorb {
+    color: #d3ccbc;
+    background-color: black;
+}
+.colorc {
+    color: #fb350d;
+    background-color: black;
+}
+
+
+
 button {
     background-color: transparent;
 }
@@ -261,7 +288,7 @@ footer {
 .headercontains {
     display: flex;
     position:absolute;
-    top:-30%;
+    top:-20%;
 }
 
 .headercontains .underpic {
@@ -291,12 +318,17 @@ footer {
     padding:3em;
     color:#d3ccbc;
 }
+.shopitem:hover{
+    background-color: #f7684b;
+    color:black;
+    transform:scale(1.1);
+
+}
 
 .shopitem img {
     width:100%;
     max-width: 200px;
 }
-
 
 .shoplink {
     font-size: 1em;
@@ -314,16 +346,25 @@ footer {
     
 }
 
+.lineformenu1 {
+    background-color: #d3ccbc;
+
+}
+.lineformenu2 {
+    background-color: #fb350d;
+}
+.lineformenu3 {
+    background-color: black;
+}
+
 .hoverline1 {
     position:relative;
-    background-color: #d3ccbc;
     width:120px;
     height: 5px;
     top:0;
 }
 .hoverline2 {
     position:relative;
-    background-color: #d3ccbc;
     width:40px;
     height: 5px;
     top:12px;
@@ -332,7 +373,6 @@ footer {
 }
 .hoverline3 {
     position:relative;
-    background-color: #d3ccbc;
     width:60px;
     height: 5px;
     top:24px;
@@ -346,15 +386,36 @@ footer {
 }
 .altbtns {
     border-radius: 100%;
-    border:3px solid #d3ccbc;
     width:30px;
     height:auto;
     margin:0;
+}
+.altbtncl1{
+    border:3px solid #d3ccbc;
     color:#d3ccbc;
 }
-.altbtns:hover {
+.altbtncl2{
+    border:3px solid #fb350d;
+    color:#fb350d;
+}
+.altbtncl3{
+    border:3px solid black;
+    color:black;
+}
+
+.altbtncl1:hover {
     background-color: #d3ccbc;
     color:black;
+}
+
+.altbtncl2:hover {
+    background-color: #fb350d;
+    color:black;
+}
+
+.altbtncl1:hover {
+    background-color: black;
+    color:#d3ccbc;
 }
 
 
@@ -369,10 +430,15 @@ footer {
     z-index: 1; 
     top: 0;
     left: 0;
-    background-color: #d3ccbc;
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s; 
+  }
+  .menu1 {
+    background-color: #d3ccbc;
+  }
+  .menu2 {
+    background-color: #fb350d;
   }
   
   .sidemenu a {
@@ -388,4 +454,3 @@ footer {
     color: #292429;
     opacity: 50%;
   }
-/*PLEASE ADD MEDIA QUERIES or use tailwind properly idk*/

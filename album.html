@@ -10,25 +10,74 @@
 <body>
     <div class="fixedinbg bgfixed2">
         <div id="clickLine" class="contline">
-            <div class="hoverline1"></div>
-            <div class="hoverline2"></div>
-            <div class="hoverline3"></div>
-            <div class="divforbutton"><button id="unfoldMenuThing" class="altbtns" onclick="openNav()">+</button></div>
+            <div class="hoverline1 lineformenu2"></div>
+            <div class="hoverline2 lineformenu2"></div>
+            <div class="hoverline3 lineformenu2"></div>
+            <div class="divforbutton"><button id="unfoldMenuThing" class="altbtns altbtncl2" onclick="openNav()">+</button></div>
         </div>
     </div>
     <div id="fadeDiv" class="cfade">
-        <div id="sideMenuThing" class="sidemenu">
-            <a href="#">Home</a>
-            <a href="#">Biography</a>
-            <a href="#">Albums</a>
-            <a href="#">Contact</a>
+        <div id="sideMenuThing" class="sidemenu menu2">
+            <a href="index.html">Home</a>
+            <a href="biog.html">Biography</a>
+            <a href="album.html">Albums</a>
+            <a href="subscription.html">Contact</a>
         </div>
         <div class="headercontains">
         <h1 class="maintitle">Albums</h1>
         </div>
-
-        <!--use gallery here-->
-        
+        <div id="slideshow" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="files/albums/again.jpg" class="d-block w-50" alt="Again">
+            </div>
+            <div class="carousel-item">
+                <img src="files/albums/magic-opn.jpg" class="d-block w-50" alt="Magic Oneohtrix Point Never">
+            </div>
+            <div class="carousel-item">
+                <img src="files/albums/age-of.jpg" class="d-block w-50" alt="Age Of">
+            </div>
+            <div class="carousel-item">
+                <img src="files/albums/garden-of-delete.jpg" class="d-block w-50" alt="Garden Of Delete">
+            </div>
+            <div class="carousel-item">
+                <img src="files/albums/rifts.jpg" class="d-block w-50" alt="Rifts">
+            </div>
+            <div class="carousel-item">
+                <img src="files/albums/r-plus-seven.jpg" class="d-block w-50" alt="R Plus Seven">
+            </div>
+            <div class="carousel-item">
+                <img src="files/albums/the-fall-into.jpg" class="d-block w-50" alt="The Fall Into Time">
+            </div>
+            <div class="carousel-item">
+                <img src="files/albums/drawn-and-quartered.jpg" class="d-block w-50" alt="Drawn and Quartered">
+            </div>
+            <div class="carousel-item">
+                <img src="files/albums/zones-without-people.jpg" class="d-block w-50" alt="Zones Without People">
+            </div>
+            <div class="carousel-item">
+                <img src="files/albums/russian-mind.jpg" class="d-block w-50" alt="Russian Mind">
+            </div>
+            <div class="carousel-item">
+                <img src="files/albums/betrayed-in-the.jpg" class="d-block w-50" alt="Betrayed in the Octagon">
+            </div>
+            <div class="carousel-item">
+                <img src="files/albums/replica.jpg" class="d-block w-50" alt="Replica">
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <footer class="colorc">
+            <p><a class="colorc" href="about.html">About me</a> | <a class="colorc" href="subscription.html">Subscribe to our <b>newsletter</b></a></p>
+            <!--needs more stuff-->
+        </footer>
     </div>
     <!--then the carousel gallery in the center-->
     <!--below, more individual albums placed evenly for filler-->

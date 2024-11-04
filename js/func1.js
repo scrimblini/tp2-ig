@@ -33,7 +33,3 @@ function openNav() {
         console.log("close");
     }
 }
-  function closeNav() {
-    document.getElementById("sideMenuThing").style.width = "0";
-    document.getElementById("cfade").style.marginLeft = "0";
-  }
