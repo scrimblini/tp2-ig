@@ -122,7 +122,7 @@ button {
 
 .imgpic {
     width:100%;
-    max-width: 700px;
+    max-width: 500px;
     padding: 0.8em;
     display: inline-block;
 }
@@ -282,15 +282,14 @@ footer {
     box-shadow: 0 -100px 100px black;
 }
 
-.cfade p {
+.cfade p      {
     font-size: 1.5em;
-    padding: 2em;
 }
 
 .headercontains {
     display: flex;
     position:absolute;
-    top:-20%;
+    top:-100px;
 }
 
 .headercontains .underpic {
@@ -345,6 +344,8 @@ footer {
     top:2px;
     left:0;
     width:100%;
+    
+    z-index: 5;
     
 }
 
