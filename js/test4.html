@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expandable Cart Icon with Overlay</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .clickable-image {
+    width: 200px;
+    cursor: pointer;
+    margin: 10px;
+  }
+
+  /* Overlay for popup content */
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .popup-content {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .popup-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  .close-button:hover {
+    color: black;
+  }
+
+  /* Cart Icon */
+  .cart-icon {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  /* Cart Container */
+  .cart-container {
+    display: none;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 8px;
+    width: 250px;
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  .remove-button {
+    cursor: pointer;
+    font-size: 16px;
+    color: red;
+    background: none;
+    border: none;
+  }
+
+  .add-to-cart-button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .add-to-cart-button:hover {
+    background-color: #218838;
+  }
+
+  /* Full-screen overlay style for mobile */
+  @media (max-width: 600px) {
+    .cart-container {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      border-radius: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      color: white;
+      padding-top: 20px;
+      text-align: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Clickable Images -->
+<img src="image1.jpg" alt="Image 1" class="clickable-image" 
+     data-title="Title 1" 
+     data-content="This is the content for Image 1." 
+     data-image="popup-image1.jpg">
+
+<img src="image2.jpg" alt="Image 2" class="clickable-image" 
+     data-title="Title 2" 
+     data-content="This is the content for Image 2." 
+     data-image="popup-image2.jpg">
+
+<img src="image3.jpg" alt="Image 3" class="clickable-image" 
+     data-title="Title 3" 
+     data-content="This is the content for Image 3." 
+     data-image="popup-image3.jpg">
+
+<!-- Overlay for Pop-up Content -->
+<div class="overlay" id="popupOverlay">
+  <div class="popup-content">
+    <button class="close-button" onclick="closePopup()">×</button>
+    <h2 id="popupTitle"></h2>
+    <p id="popupContent"></p>
+    <img id="popupImage" src="" alt="Popup Image">
+    <button class="add-to-cart-button" onclick="addToCart()">Add to Cart</button>
+  </div>
+</div>
+
+<!-- Cart Icon -->
+<div class="cart-icon" onclick="toggleCart()">
+  🛒
+</div>
+
+<!-- Cart Container (shared for both desktop and mobile) -->
+<div class="cart-container" id="cartContainer">
+  <button onclick="toggleCart()" style="background: none; border: none; color: red; font-size: 20px; cursor: pointer;">Close</button>
+  <h3>Your Cart</h3>
+  <div id="cartItems"></div>
+</div>
+
+<script>
+  let cart = [];
+  let currentItem = null;
+
+  // Function to open the popup with dynamic content
+  function openPopup(title, content, imageUrl) {
+    document.getElementById('popupTitle').innerText = title;
+    document.getElementById('popupContent').innerText = content;
+    document.getElementById('popupImage').src = imageUrl;
+    document.getElementById('popupOverlay').style.display = 'flex';
+    currentItem = { title, content, imageUrl };
+  }
+
+  function closePopup() {
+    document.getElementById('popupOverlay').style.display = 'none';
+  }
+
+  function addToCart() {
+    if (currentItem) {
+      cart.push(currentItem);
+      updateCart();
+      closePopup();
+    }
+  }
+
+  // Toggle cart display
+  function toggleCart() {
+    const cartContainer = document.getElementById('cartContainer');
+    cartContainer.style.display = cartContainer.style.display === 'flex' ? 'none' : 'flex';
+  }
+
+  function updateCart() {
+    const cartItemsContainer = document.getElementById('cartItems');
+    cartItemsContainer.innerHTML = ''; // Clear previous items
+
+    cart.forEach((item, index) => {
+      const cartItem = document.createElement('div');
+      cartItem.classList.add('cart-item');
+      cartItem.innerHTML = `
+        <span>${item.title}</span>
+        <button class="remove-button" onclick="removeFromCart(${index})">x</button>
+      `;
+      cartItemsContainer.appendChild(cartItem);
+    });
+  }
+
+  function removeFromCart(index) {
+    cart.splice(index, 1); // Remove item by index
+    updateCart();
+  }
+
+  // Add click event listeners to each image
+  document.querySelectorAll('.clickable-image').forEach(image => {
+    image.addEventListener('click', () => {
+      const title = image.getAttribute('data-title');
+      const content = image.getAttribute('data-content');
+      const imageUrl = image.getAttribute('data-image');
+      openPopup(title, content, imageUrl);
+    });
+  });
+</script>
+
+</body>
+</html>

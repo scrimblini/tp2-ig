@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Image Descriptions</title>
+    <style>
+        /* Hide all descriptions initially */
+        .description {
+            display: none;
+            font-size: 16px;
+            color: #333;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Images with individual onclick functions -->
+    <img src="image1.jpg" alt="Image 1" onclick="showDescription1()" style="cursor: pointer;" width="200" height="150">
+    <img src="image2.jpg" alt="Image 2" onclick="showDescription2()" style="cursor: pointer;" width="200" height="150">
+    <img src="image3.jpg" alt="Image 3" onclick="showDescription3()" style="cursor: pointer;" width="200" height="150">
+
+    <!-- Corresponding descriptions with unique IDs -->
+    <p class="description" id="description1">This is the description for Image 1.</p>
+    <p class="description" id="description2">This is the description for Image 2.</p>
+    <p class="description" id="description3">This is the description for Image 3.</p>
+
+    <script>
+        // Function to hide all descriptions
+        function hideAllDescriptions() {
+            document.querySelectorAll('.description').forEach(desc => {
+                desc.style.display = 'none';
+            });
+        }
+
+        // Individual functions to show each description
+        function showDescription1() {
+            hideAllDescriptions();
+            document.getElementById('description1').style.display = 'block';
+        }
+
+        function showDescription2() {
+            hideAllDescriptions();
+            document.getElementById('description2').style.display = 'block';
+        }
+
+        function showDescription3() {
+            hideAllDescriptions();
+            document.getElementById('description3').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
