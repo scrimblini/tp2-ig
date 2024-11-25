@@ -23,7 +23,7 @@ body {
     -webkit-filter:blur(20px);
 }
 
-main, .maintitle, .maintitle2 {
+main, .maintitle, .maintitle2{
     margin-top: 100px;
 }
 
@@ -39,6 +39,10 @@ nav {
 
 a {
     color:#7ccbdf;
+}
+
+.underlinelink {
+    text-decoration: underline;
 }
 
 .homebg {
@@ -98,6 +102,10 @@ a:hover {
     justify-content: center;
     max-width: 800px;
     min-width:700px;
+}
+
+.centertitle {
+    text-align: center;
 }
 
 .navdark {
@@ -246,7 +254,7 @@ a:hover {
     top: 10%;
     right: 10px;
     background-color: #fff;
-    padding: 10px;
+    padding: 15px;
     border-radius: 50%;
     cursor: pointer;
     z-index: 1001;
@@ -335,8 +343,9 @@ footer {
     }
     .contcenter {
         min-width:0%;
+        margin-top: 100px;
     }
-    .maintitle {
+    .maintitle, .maintitle2 {
         display: none;
     }
     .smalltitle {
@@ -365,6 +374,7 @@ footer {
     }
 
     .cart-icon {
+        top:15%;
         padding: 20px;
         font-size:1.5em;
       }
